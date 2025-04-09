@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-// import "../../../public/project-1-thumbnail.jpg"
 import {
   TooltipProvider,
   Tooltip,
