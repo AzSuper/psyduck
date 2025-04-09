@@ -866,39 +866,6 @@ const StorySection = () => {
             />
           ))}
         </motion.div>
-
-        {/* Floating navigation arrows */}
-        {/* <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between pointer-events-none px-4 md:px-10">
-          <motion.button
-            onClick={() => {
-              const currentIndex = tabs.findIndex(tab => tab.id === activeTab);
-              const prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-              handleTabClick(tabs[prevIndex].id);
-            }}
-            className="w-10 h-10 rounded-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-green-500/50 pointer-events-auto transform transition-all duration-300 hover:-translate-x-1"
-            whileHover={{ scale: 1.1, x: -5 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-          </motion.button>
-          
-          <motion.button
-            onClick={() => {
-              const currentIndex = tabs.findIndex(tab => tab.id === activeTab);
-              const nextIndex = (currentIndex + 1) % tabs.length;
-              handleTabClick(tabs[nextIndex].id);
-            }}
-            className="w-10 h-10 rounded-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-green-500/50 pointer-events-auto transform transition-all duration-300 hover:translate-x-1"
-            whileHover={{ scale: 1.1, x: 5 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-            </svg>
-          </motion.button>
-        </div> */}
       </div>
 
       {/* Add tailwind animation classes in your CSS */}
@@ -1059,9 +1026,9 @@ const CharitySection = () => {
             <div className="prose prose-lg prose-invert">
               <p>
                 Volunteering has been a cornerstone of my personal growth.
-                Through these experiences, I've had the opportunity to connect
-                with diverse communities, understand different perspectives, and
-                apply my technical skills for social good.
+                Through these experiences, I&apos;ve had the opportunity to
+                connect with diverse communities, understand different
+                perspectives, and apply my technical skills for social good.
               </p>
 
               <div className="my-8 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
@@ -1115,8 +1082,8 @@ const CharitySection = () => {
                   </svg>
                 </div>
                 <p className="text-white font-medium">
-                  Interested in collaborating on social impact projects? Let's
-                  connect!
+                  Interested in collaborating on social impact projects?
+                  Let&apos;s connect!
                 </p>
               </div>
             </div>

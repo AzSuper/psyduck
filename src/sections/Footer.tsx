@@ -23,7 +23,7 @@ const Footer = () => {
               Mohammad Abozamel
             </h3>
             <p className="text-gray-200 mb-4">
-              Creating innovative solutions for tomorrow's challenges.
+              Creating innovative solutions for tomorrow&apos;s challenges.
             </p>
             <div className="flex space-x-4 mt-2">
               <a

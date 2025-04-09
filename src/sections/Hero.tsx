@@ -200,7 +200,9 @@ export const HeroSection = () => {
             >
               👋
             </motion.span>
-            <span className="text-gray-900 font-semibold">Let's Connect</span>
+            <span className="text-gray-900 font-semibold">
+              Let&apos;s Connect
+            </span>
           </motion.a>
         </motion.div>
       </motion.div>
