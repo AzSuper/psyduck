@@ -250,9 +250,11 @@ const AboutMe = () => {
                   />
                   {/* Logo image above the glitch effect */}
                   <div className="absolute inset-0 flex items-center justify-center z-50">
-                    <img
+                    <Image
                       src="/logo.png"
                       alt="Profile"
+                      width={80}
+                      height={80}
                       className="w-20 h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 transform scale-110 hover:scale-125"
                     />
                   </div>
@@ -624,13 +626,15 @@ const StorySection = () => {
                       <div className="relative">
                         <div className="p-1 bg-gradient-to-r from-green-400 to-cyan-500 rounded-2xl">
                           <div className="bg-gray-900 p-1 rounded-2xl overflow-hidden">
-                            <img
+                            <Image
                               src={
                                 tabContent[tabId].image ||
                                 "https://via.placeholder.com/600x400"
                               }
                               alt={tabContent[tabId].title}
                               className="rounded-xl transform group-hover:scale-105 transition-transform duration-500 w-full"
+                              width={600}
+                              height={400}
                             />
                           </div>
                         </div>
@@ -971,12 +975,14 @@ const CharitySection = () => {
               >
                 <div className="relative">
                   <div className="p-1 bg-white rounded-lg shadow-xl">
-                    <img
+                    <Image
                       src={
                         image.src ||
                         `https://via.placeholder.com/300x200?text=Charity+${image.id}`
                       }
                       alt={image.alt}
+                      width={224}
+                      height={160}
                       className="w-56 h-40 object-cover rounded-md"
                     />
                   </div>
