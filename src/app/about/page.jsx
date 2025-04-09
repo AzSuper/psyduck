@@ -16,89 +16,6 @@ const AboutMe = () => {
     { id: "uptime", text: "Uptime:", delay: 400 },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
-  const courses = [
-    {
-      id: 1,
-      title: "React Advanced Patterns",
-      category: "Frontend Development",
-      level: "Advanced",
-      image: "/api/placeholder/400/240", // Placeholder image
-      progress: 68,
-      completedLessons: 17,
-      totalLessons: 25,
-    },
-    {
-      id: 2,
-      title: "Next.js Fundamentals",
-      category: "Web Development",
-      level: "Intermediate",
-      image: "/api/placeholder/400/240",
-      progress: 42,
-      completedLessons: 5,
-      totalLessons: 12,
-    },
-    {
-      id: 3,
-      title: "Tailwind CSS Mastery",
-      category: "CSS Frameworks",
-      level: "Beginner",
-      image: "/api/placeholder/400/240",
-      progress: 90,
-      completedLessons: 9,
-      totalLessons: 10,
-    },
-    {
-      id: 4,
-      title: "Node.js Backend Development",
-      category: "Backend Development",
-      level: "Intermediate",
-      image: "/api/placeholder/400/240",
-      progress: 25,
-      completedLessons: 3,
-      totalLessons: 12,
-    },
-    {
-      id: 5,
-      title: "TypeScript Deep Dive",
-      category: "Programming Languages",
-      level: "Advanced",
-      image: "/api/placeholder/400/240",
-      progress: 55,
-      completedLessons: 11,
-      totalLessons: 20,
-    },
-    {
-      id: 6,
-      title: "React Native Essentials",
-      category: "Mobile Development",
-      level: "Intermediate",
-      image: "/api/placeholder/400/240",
-      progress: 10,
-      completedLessons: 2,
-      totalLessons: 18,
-    },
-  ];
-
   useEffect(() => {
     let timeout;
     let lineIndex = 0;
@@ -117,18 +34,22 @@ const AboutMe = () => {
   }, []);
 
   const packages = [
-    "React",
-    "Next.js",
-    "TailwindCSS",
-    "GSAP",
-    "ShadCN",
-    "Bootstrap",
-    "Three.js",
-    "SQL",
-    "MongoDB",
-    "ReactNative",
-    "Figma",
-    "Go",
+    { name: "React", url: "https://react.dev/docs/getting-started" },
+    { name: "Next.js", url: "https://nextjs.org/docs" },
+    { name: "TailwindCSS", url: "https://tailwindcss.com/docs" },
+    { name: "GSAP", url: "https://greensock.com/docs/" },
+    { name: "ShadCN", url: "https://ui.shadcn.com/docs" },
+    { name: "Bootstrap", url: "https://getbootstrap.com/docs" },
+    { name: "Three.js", url: "https://threejs.org/docs/" },
+    { name: "SQL", url: "https://dev.mysql.com/doc/" },
+    { name: "MongoDB", url: "https://docs.mongodb.com/" },
+    {
+      name: "ReactNative",
+      url: "https://reactnative.dev/docs/getting-started",
+    },
+    { name: "Electron", url: "https://www.electronjs.org/docs/latest/" },
+    { name: "Figma", url: "https://help.figma.com/" },
+    { name: "Go", url: "https://golang.org/doc/" },
   ];
 
   return (
@@ -180,6 +101,20 @@ const AboutMe = () => {
                     <span className="ml-2 text-green-200 font-semibold">
                       Human v1.0
                     </span>
+                    <a
+                      href="https://wiki.archlinux.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-3 font-mono font-bold"
+                      style={{
+                        animation:
+                          "rainbow 4s linear infinite, blink 1s ease-in-out infinite",
+                        textShadow: "0 0 5px rgba(255,255,255,0.3)",
+                        textDecoration: "none",
+                      }}
+                    >
+                      arch btw!
+                    </a>
                   </p>
                 )}
 
@@ -199,13 +134,16 @@ const AboutMe = () => {
                     <span className="w-20 inline-block">Packages:</span>
                     <div className="ml-2 flex flex-wrap gap-2">
                       {packages.map((pkg, index) => (
-                        <span
-                          key={pkg}
-                          className="px-2 py-1 bg-green-900/20 border border-green-500/30 rounded-md text-green-300 shadow-sm shadow-green-500/20 hover:bg-green-800/30 hover:scale-105 transition-all duration-300 cursor-default"
+                        <a
+                          key={pkg.name}
+                          href={pkg.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-2 py-1 bg-green-900/20 border border-green-500/30 rounded-md text-green-300 shadow-sm shadow-green-500/20 hover:bg-green-800/30 hover:scale-105 transition-all duration-300"
                           style={{ animationDelay: `${index * 100}ms` }}
                         >
-                          {pkg}
-                        </span>
+                          {pkg.name}
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -705,7 +643,7 @@ const StorySection = () => {
                           <ul className="space-y-2">
                             {[
                               "Web App Development",
-                              "DevOps Engineering",
+                              "DevOps methodology",
                               "Software Development",
                               "Automation and Ai Prompt",
                             ].map((milestone, i) => (
@@ -816,36 +754,6 @@ const StorySection = () => {
                           </div>
                         </motion.div>
                       )}
-
-                      {/* CTA Button for all tabs */}
-                      <motion.div className="mt-8" variants={itemVariants}>
-                        <motion.button
-                          className="px-6 py-2.5 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full text-white font-medium flex items-center gap-2 hover:shadow-lg hover:shadow-green-500/20 transform transition-all duration-300 hover:-translate-y-1"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Learn more about my{" "}
-                          {tabId === "who"
-                            ? "journey"
-                            : tabId === "study"
-                            ? "education"
-                            : tabId === "adventure"
-                            ? "adventures"
-                            : "lifestyle"}
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </motion.button>
-                      </motion.div>
                     </div>
                   </div>
                 </motion.div>
@@ -1254,6 +1162,46 @@ const CharitySection = () => {
         .scrollbar-track-gray-800::-webkit-scrollbar-track {
           background-color: #1f2937;
           border-radius: 9999px;
+        }
+        .rainbow-text {
+          animation: rainbow 4s linear infinite, blink 1s ease-in-out infinite;
+        }
+
+        @keyframes rainbow {
+          0% {
+            color: #ff0000;
+          }
+          14% {
+            color: #ff7f00;
+          }
+          28% {
+            color: #ffff00;
+          }
+          42% {
+            color: #00ff00;
+          }
+          57% {
+            color: #0000ff;
+          }
+          71% {
+            color: #4b0082;
+          }
+          85% {
+            color: #9400d3;
+          }
+          100% {
+            color: #ff0000;
+          }
+        }
+
+        @keyframes blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.7;
+          }
         }
       `}</style>
     </section>
