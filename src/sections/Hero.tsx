@@ -162,7 +162,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 1.3 }}
           >
             I specialized in transforming Idea to Real, Functional, High
-            Performing, Web App, Lets Discuss Your Next Project.
+            Performing, Reel App, Lets Discuss Your Next Project.
           </motion.p>
         </motion.div>
 
