@@ -399,7 +399,7 @@ const StorySection = () => {
       title: "Beyond The Code",
       content:
         "When I'm not coding, I'm exploring. Whether it's hiking in remote mountains, traveling to new cities, or simply trying new experiences, I believe adventure fuels creativity. These experiences outside the digital world provide fresh perspectives that influence my approach to problem-solving and design.",
-      image: "/adventure-1.jpg",
+      image: "/adventure-3.jpg",
     },
     country: {
       title: "Roots & Lifestyle",
