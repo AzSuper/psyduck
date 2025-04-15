@@ -48,6 +48,10 @@ const AboutMe = () => {
       url: "https://reactnative.dev/docs/getting-started",
     },
     { name: "Electron", url: "https://www.electronjs.org/docs/latest/" },
+    {
+      name: "Framer-Motion",
+      url: "https://www.npmjs.com/package/framer-motion",
+    },
     { name: "Figma", url: "https://help.figma.com/" },
     { name: "Go", url: "https://golang.org/doc/" },
   ];
@@ -395,7 +399,7 @@ const StorySection = () => {
       title: "Beyond The Code",
       content:
         "When I'm not coding, I'm exploring. Whether it's hiking in remote mountains, traveling to new cities, or simply trying new experiences, I believe adventure fuels creativity. These experiences outside the digital world provide fresh perspectives that influence my approach to problem-solving and design.",
-      image: "/adventure-4.jpg",
+      image: "/adventure-1.jpg",
     },
     country: {
       title: "Roots & Lifestyle",
