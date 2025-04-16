@@ -42,11 +42,6 @@ const AboutMe = () => {
     { name: "Bootstrap", url: "https://getbootstrap.com/docs" },
     { name: "Three.js", url: "https://threejs.org/docs/" },
     { name: "SQL", url: "https://dev.mysql.com/doc/" },
-    { name: "MongoDB", url: "https://docs.mongodb.com/" },
-    {
-      name: "ReactNative",
-      url: "https://reactnative.dev/docs/getting-started",
-    },
     { name: "Electron", url: "https://www.electronjs.org/docs/latest/" },
     {
       name: "Framer-Motion",
